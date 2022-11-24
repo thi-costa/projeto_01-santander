@@ -322,6 +322,9 @@ public class Main {
             System.out.println("-=".repeat(5) +"-=-=-=-=-=-=-=-=-=-=-=" + "-=".repeat(5));
 
             Files.write(path, listaProdutosOriginal);
+            
+            System.out.print("Compra Realizada com sucesso\n\n");
+            carrinhoCompras = new HashMap<>();
 
         } catch (Exception ex){
             System.out.println("Error" + ex.getMessage());
