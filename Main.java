@@ -190,7 +190,7 @@ public class Main {
         }
     }
     public static void deletarProduto(Scanner input){
-        List<String> listaProdutosOriginal = listarProsutos();
+       List<String> listaProdutosOriginal = listarProsutos();
 
         boolean isInvalid;
 
@@ -204,10 +204,32 @@ public class Main {
                 input.nextLine();
 
                 if (idProduto >= 0 && idProduto < listaProdutosOriginal.size()) {
-                    listaProdutosOriginal.remove(idProduto.intValue());
-                    Files.write(path, listaProdutosOriginal);
 
-                    System.out.print("Produto deletado com sucesso\n\n");
+                    boolean rodando = true;
+                    while (rodando) {
+
+                        System.out.println("Deseja realmente deletar este produto?");
+                        System.out.println("1 - Sim");
+                        System.out.println("2 - Não");
+                        System.out.print("Digite uma opção: ");
+                        String opcao = input.nextLine();
+
+                        switch (opcao) {
+                            case "1" -> {
+                                listaProdutosOriginal.remove(idProduto.intValue());
+                                Files.write(path, listaProdutosOriginal);
+
+                                rodando = false;
+                                System.out.print("Produto deletado com sucesso\n\n");
+                            }
+                            case "2" -> {
+                                rodando = false;
+                                System.out.print("Voltando...\n\n");
+                            }
+                            default -> System.out.println("Opção inválida");
+                        }
+
+                    }
 
                 } else {
                     System.out.println("[ERRO] ID inválido!");
