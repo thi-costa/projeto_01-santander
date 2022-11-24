@@ -63,7 +63,7 @@ public class Main {
         return produtos;
     }
 
-    public static List<String> listarProsutos() {
+    public static List<String> listarProdutos() {
         List<String> produtos = pegarProdutos();
 
         try {
@@ -120,7 +120,7 @@ public class Main {
 
     }
     public static void editarProduto(Scanner input){
-        List<String> listaProdutosOriginal = listarProsutos();
+        List<String> listaProdutosOriginal = listarProdutos();
 
         boolean isInvalid;
 
@@ -190,7 +190,7 @@ public class Main {
         }
     }
     public static void deletarProduto(Scanner input){
-       List<String> listaProdutosOriginal = listarProsutos();
+        List<String> listaProdutosOriginal = listarProdutos();
 
         boolean isInvalid;
 
@@ -250,7 +250,7 @@ public class Main {
     }
     public static void comprarProduto(Scanner input)  {
         try{
-            List<String> listaProdutosOriginal = listarProsutos();
+            List<String> listaProdutosOriginal = listarProdutos();
             Integer id = 0;
 
             System.out.println("Qual o id do produto que você deseja comprar?");
