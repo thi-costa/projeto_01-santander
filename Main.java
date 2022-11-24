@@ -1,6 +1,5 @@
 package aula_exercicio;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -9,7 +8,6 @@ import java.util.*;
 
 public class Main {
     static Map<Integer, Integer> carrinhoCompras = new HashMap<>();
-    static List<String> listaContatos = new ArrayList<>();
     static Path path = Paths.get("./arquivo.txt");
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -84,14 +82,13 @@ public class Main {
     }
 
     public static void criarProduto(Scanner input){
-        // Criei um método separado apenas por conta de precisar usar o try catch dentro do loop
-        // com o try catch dentro do loop eu consigo modificar o "isInvalid" para true dentro do catch
+        // Método de criação do produto
 
         criarArquivo();
 
         boolean isInvalid;
 
-        //Joguei um do while aqui para nao deixar o programa quebrar em caso de erro
+        // Do while para inserção dos dados do produto
 
         do {
             isInvalid = false;
