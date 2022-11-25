@@ -174,6 +174,7 @@ public class Main {
             String produtoPesquisado = input.nextLine().toLowerCase();
 
             Integer id = 0;
+            Integer produtosEncontrados = 0;
 
             for (String line : listaProdutos) {
                 String[] produto = line.split("\\|");
@@ -182,11 +183,16 @@ public class Main {
                 if (nomeProduto.contains(produtoPesquisado)) {
                     System.out.printf("Id: %d; Nome: %s; Qtde de estoque: %s; Preço: %s;\n", id, produto[0], produto[1],
                             produto[2]);
+                    produtosEncontrados++;
                 }
                 id++;
             }
 
             System.out.print("\n");
+
+            if(produtosEncontrados==0){
+                System.out.printf("Esse produto '%s' não existe.\n", produtoPesquisado);
+            }
 
         } catch (Exception ex) {
             System.out.println("Error" + ex.getMessage());
