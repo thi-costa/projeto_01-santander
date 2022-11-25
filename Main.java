@@ -43,7 +43,7 @@ public class Main {
     public static void criarArquivo() {
         try {
             if (Files.exists(path)) {
-                System.out.println("Arquivo ja existe");
+                System.out.printf("Arquivo '%s' ja existe\n", path.toString());
             } else {
                 path = Files.createFile(path);
                 System.out.println("Arquivo criado em: " + path.toString());
