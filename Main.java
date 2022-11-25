@@ -70,6 +70,7 @@ public class Main {
         List<String> produtos = pegarProdutos();
 
         try {
+            System.out.println("-=".repeat(5)+"LISTA DE PRODUTOS"+"-=".repeat(5));
             for (int i = 0; i < produtos.size(); i++) {
                 String[] produto = produtos.get(i).split("\\|");
 
