@@ -33,10 +33,11 @@ public class Main {
                 case "4"-> deletarProduto(input);
                 case "5"-> comprarProduto(input);
                 case "6"-> finalizarCompras(input);
-                case "0"-> continuar=false;
+                case "0"-> continuar = finalizarPrograma();
                 default-> System.out.println("Opção inválida");
             }
         }
+
     }
 
     public static void criarArquivo() {
@@ -386,5 +387,10 @@ public class Main {
 
     }
 
+    public static boolean finalizarPrograma(){
+        System.out.println("-=".repeat(5)+"PROGRAMA FINALIZADO"+"-=".repeat(5));
+
+        return false;
+    }
 
 }
