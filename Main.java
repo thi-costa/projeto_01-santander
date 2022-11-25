@@ -249,8 +249,8 @@ public class Main {
         } while (isInvalid);
     }
     public static void comprarProduto(Scanner input)  {
-       try {
-            List<String> listaProdutosOriginal = listarProsutos();
+        try {
+            List<String> listaProdutosOriginal = listarProdutos();
             Integer id = 0;
 
             boolean adicionando = true;
