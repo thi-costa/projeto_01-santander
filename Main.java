@@ -21,7 +21,9 @@ public class Main {
             System.out.println("3-Pesquisar produto");
             System.out.println("4-Deletar produto");
             System.out.println("5-Comprar produtos");
-            System.out.println("6-Finalizar compra");
+            if (carrinhoCompras.entrySet().size() > 0) {
+                System.out.println("6-Finalizar compra");
+            }
             System.out.println("0-Sair");
             opcaoEntrada = input.nextLine();
             switch (opcaoEntrada){
